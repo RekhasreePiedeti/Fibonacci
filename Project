@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class Fibonacci{
+        
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number :");
+        int n = sc.nextInt();
+        List<Integer> numbersList = new ArrayList<>();
+          int x1 = 0, x2 = 1, x;
+          numbersList.add(x1);
+          numbersList.add(x2);
+          for(int i = 2; i < n; i++)
+          {
+            x = x2 + x1;
+            x1 = x2;
+            x2 = x;
+            numbersList.add(x);
+          }
+      System.out.println(numbersList);
+  }
+}
